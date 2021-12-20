@@ -1,5 +1,3 @@
-// Pre increment overload 
-
 #include <iostream>
 using namespace std;
 // Pre increment oprator
@@ -24,6 +22,15 @@ public :
         i.x=++x;
         return(i);
     }
+// Post increment so compiler differeniate in pre and post increment function
+// put a int argument so compiler differeniate in pre and post
+
+     Integr operator ++(int )
+    {
+        Integr i;
+        i.x=x++;
+        return(i);
+    }
 };
 int main()
 {
@@ -31,7 +38,9 @@ int main()
     i.set_data(3);
     i.show_data();
     Integr i2;
-    i2=++i;
+    i2=++i;      // pre increment operator
+    i2.show_data();
+    i2=i++;         // Post increment operator 
     i2.show_data();
 
     return 0;
