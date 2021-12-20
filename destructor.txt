@@ -1,0 +1,45 @@
+// Destructor in c++
+
+1. Destructor is an instance member function of a class
+
+2. The name of destructor is same as the name of class but preceded  by tilde(~) symbol
+
+3. Destructor cannot be static
+
+4. Destructor has no return type
+
+5. Destructor not take any arguments (no overloading is possible)
+
+What is a destructor? 
+
+
+Destructor is an instance member function which is invoked automatically whenever an object is going to be destroyed. Meaning, a destructor is the last function that is going to be called before an object is destroyed.
+
+The thing is to be noted here, if the object is created by using new or the constructor uses new to allocate memory which resides in the heap memory or the free store, the destructor should use delete to free the memory.   
+
+
+#include <iostream>
+using namespace std;
+class Account
+{
+private :
+    int a;
+public:
+    Account()
+    {
+        cout <<"constructor called"<<endl;;
+    }
+
+    ~Account()
+    {
+        cout <<"Destructor run"<<endl;
+    }
+};
+int main()
+{
+
+    Account a2;
+
+    
+    return 0;
+}
