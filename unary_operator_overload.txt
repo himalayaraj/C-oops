@@ -1,0 +1,45 @@
+// Operator overloading part 2
+
+// unary operator overload
+
+c2=-c1 means  c2=c1.operator-();
+
+ #include <iostream>
+using namespace std;
+class Complex
+{
+private :
+    int a;
+    int b;
+public:
+    void set_data(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void show_data()
+    {
+        cout <<a<<endl;
+        cout <<b<<endl;
+    }
+    Complex operator -()
+    {
+        Complex temp;
+        temp.a=-a;
+        temp.b=-b;
+        return(temp);
+    }
+};
+int main()
+{
+
+    Complex c1,c2,c3;
+    c1.set_data(3,4);
+    c2.set_data(4,5);
+    c3=-c1;
+    c3.show_data();
+
+
+    return 0;
+}
+
