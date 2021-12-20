@@ -1,0 +1,38 @@
+// Pre increment overload 
+
+#include <iostream>
+using namespace std;
+// Pre increment oprator
+class Integr
+{
+private :
+    int x;
+public :
+    void set_data(int a)
+    {
+        x=a;
+    }
+
+    void show_data()
+    {
+        cout << "the value is  :  "<<x<<endl;
+    }
+
+    Integr operator ++()
+    {
+        Integr i;
+        i.x=++x;
+        return(i);
+    }
+};
+int main()
+{
+    Integr i;
+    i.set_data(3);
+    i.show_data();
+    Integr i2;
+    i2=++i;
+    i2.show_data();
+
+    return 0;
+}
