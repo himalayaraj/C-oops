@@ -1,0 +1,32 @@
+#include <iostream>
+// static variable
+
+// static variable is a class variable
+
+// it make only one times
+
+// static memeber function is a class function 
+
+//It is called with or without the object 
+
+// It only access the class static variable in class 
+using namespace std;
+class Account
+{
+private :
+    int a;
+    static float roi;
+public:
+    static void show()
+    {
+        cout <<roi;
+    }
+};
+float Account :: roi=3.5;
+int main()
+{
+    cout << "Hello world!" << endl;
+    Account ::show();
+
+    return 0;
+}
