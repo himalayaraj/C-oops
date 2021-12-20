@@ -1,0 +1,86 @@
+// constructor is a member function of a class
+
+// The name of constructor is same as class name
+
+// It has no return type 
+
+// It must be an instance member function that it cannot be static
+
+ //constructor is implicitly called 
+
+//Constructor solved the problem of initilization  
+
+
+
+
+#include <iostream>
+using namespace std;
+class Account
+{
+private :
+    int a;
+public:
+    Account()
+    {
+        cout <<"constructor called";
+    }
+};
+int main()
+{
+    cout << "Hello world!" << endl;
+    Account a1,a2,a3;
+
+    return 0;
+}
+
+
+
+A constructor is a special type of member function of a class which initializes objects of a class.
+In C++, Constructor is automatically called when object(instance of class) create.
+It is special member function of the class because it does not have any return type.
+
+There are three type of constructore
+1. Default Construcor
+
+2. Parametrized constructor
+
+3. Copy constructor
+
+Compiler automatically create constructor which is default constructor where no code is there
+
+If we make any constructor then compiler will not make any constructor
+
+In our program file compiler will create two type of constructor one is default constructor and other is copy constructor
+
+// copy constructor example
+
+What is a copy constructor? 
+A copy constructor is a member function that initializes an object using another object of the same class.
+A copy constructor has the following general function prototype: 
+
+    syntax :
+         ClassName (const ClassName &old_obj);
+#include <iostream>
+using namespace std;
+class Account
+{
+private :
+    int a;
+public:
+    Account()
+    {
+        cout <<"constructor called"<<endl;;
+    }
+    Account (Account &a)
+    {
+        cout << &a;
+    }
+};
+int main()
+{
+    cout << "Hello world!" << endl;
+    Account a2;
+    cout <<&a2<<endl;
+     Account a1(a2);
+    return 0;
+}
